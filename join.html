@@ -55,12 +55,8 @@
         fetch('footer.html')
             .then(response => response.text())
             .then(data => document.getElementById('footer').innerHTML = data);
-            function handleSubmit(event) {
-            event.preventDefault(); // Prevent the default form submission
-    
-            // Optionally, you could collect and process the form data here using FormData or similar
-    
-            // Redirect to the thank you page
+        function handleSubmit(event) {
+            event.preventDefault(); 
             window.location.href = 'thankyou.html';
         }
     </script>
