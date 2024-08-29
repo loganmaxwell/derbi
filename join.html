@@ -10,7 +10,7 @@
 
 <body>
 
-    <div id="header"></div> <!-- Placeholder for header content -->
+    <div id="header"></div>
 
     <div class="content">
         <section>
@@ -45,10 +45,9 @@
         </section>
     </div>
 
-    <div id="footer"></div> <!-- Placeholder for footer content -->
+    <div id="footer"></div>
 
     <script>
-        // Load external HTML files
         fetch('header.html')
             .then(response => response.text())
             .then(data => document.getElementById('header').innerHTML = data);

@@ -163,7 +163,7 @@ nav a:hover {
     }
     to {
         transform: scale(1);
-        opacity: 1);
+        opacity: 1;
     }
 }
 
@@ -264,4 +264,52 @@ nav a:hover {
     content: "";
     clear: both;
     display: table;
+}
+
+#wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    margin: 20px auto;
+    position: relative;
+}
+
+.segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: lightblue;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    transform-origin: 100% 100%;
+}
+
+#arrow {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid red;
+    position: absolute;
+    top: -40px;
+    left: calc(50% - 20px);
+    z-index: 1000;
+}
+
+#spinButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
 }

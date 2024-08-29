@@ -10,7 +10,7 @@
 
 <body>
 
-    <div id="header"></div> <!-- Placeholder for header content -->
+    <div id="header"></div>
 
     <div class="content">
         <section>
@@ -35,29 +35,68 @@
 
         <section>
             <h2>What You Can Achieve</h2>
+<<<<<<< Updated upstream
             <p>By joining DerBi Corp inc ltd MLM, you open the door to limitless possibilities. Whether you’re looking to build a robust income stream, develop new skills, or simply enjoy a better lifestyle, our platform provides everything you need to succeed—all without leaving your butt too far behind. With our support, your home can become more than just a place to live; it can become a powerful center of success.</p>
             <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" alt="Achievements">
+=======
+            <p>By joining DerBi Corp inc ltd MLM, you open the door to limitless possibilities. Whether you're looking to build a robust income stream, develop new skills, or simply live the life of your dreams, our platform provides everything you need to succeed—without the usual hurdles.</p>
+
+            <h2>Spin the Wheel of Destiny</h2>
+            <div id="wheel">
+                <div class="segment" style="background-color: #FF6384; transform: rotate(0deg);"></div>
+                <div class="segment" style="background-color: #36A2EB; transform: rotate(45deg);"></div>
+                <div class="segment" style="background-color: #FFCE56; transform: rotate(90deg);"></div>
+                <div class="segment" style="background-color: #4BC0C0; transform: rotate(135deg);"></div>
+                <div class="segment" style="background-color: #9966FF; transform: rotate(180deg);"></div>
+                <div class="segment" style="background-color: #FF9F40; transform: rotate(225deg);"></div>
+                <div class="segment" style="background-color: #FF6384; transform: rotate(270deg);"></div>
+                <div class="segment" style="background-color: #36A2EB; transform: rotate(315deg);"></div>
+            </div>
+            <div id="arrow"></div>
+            <button id="spinButton">Spin Now!</button>
+            <div id="result"></div>
+>>>>>>> Stashed changes
         </section>
         
     </div>
 
-    <div id="footer"></div> <!-- Placeholder for footer content -->
+    <div id="footer"></div>
 
     <script>
-        // Load external HTML files
         fetch('header.html')
             .then(response => response.text())
             .then(data => document.getElementById('header').innerHTML = data);
         fetch('footer.html')
             .then(response => response.text())
             .then(data => document.getElementById('footer').innerHTML = data);
-
-        // Income Calculator Script
         function calculateIncome() {
             const recruits = document.getElementById('recruits').value;
             const income = recruits * 10000;
             document.getElementById('income-result').innerHTML = `Congratulations! You could earn $${income.toLocaleString()}! Now get off your butt and start recruiting!`;
         }
+
+        const destinies = [
+                "Brace yourself, for your booty bank account is about to explode with unimaginable wealth! The kind of wealth that will have you sitting pretty on a golden throne, your riches overflowing like a river of gluteal gold. Get ready to watch your assets grow in ways you've never dreamed possible!",
+                "Prepare for the ultimate rear-end revolution! Your life is about to be turned upside down—in the best way possible. You'll experience a seismic shift in your fortunes as your derriere takes center stage, leading you to glory, fame, and a lifestyle of absolute luxury. This revolution will leave everyone in awe of your newfound power and poise!",
+                "Get ready to double down on your derriere destiny! The stars have aligned, and they’ve got your back—literally! Your future is filled with endless opportunities that will lift you to new heights, where your every step is cushioned by the plushness of prosperity. Expect double the rewards, double the success, and double the compliments on your posterior prowess!",
+                "You’ll be the talk of the town, the toast of every gathering, as your newfound gluteal gains catapult you into a league of your own! People will whisper in amazement as you pass by, marveling at how you've managed to elevate your life—and your bottom—to such legendary status. This is your moment to shine, from the bottom up!",
+                "Your buns of fortune are just around the corner, and they’re not just any buns—they’re the kind that could win awards, spark envy, and inspire entire generations! This is the beginning of a journey where every cheeky move you make leads to greater glory and success. Prepare to embrace a future where your buns are truly the talk of the universe!",
+                "A boost to your bottom line is on its way, and it’s going to be so big, so monumental, that it’ll make headlines! Your financials will inflate to astronomical proportions, supported by the incredible foundation of your ever-growing rear assets. Get ready for a ride where every dollar earned feels like a cushion under your throne of wealth!",
+                "Your rear future is looking bright, bountiful, and brimming with potential beyond your wildest dreams! Picture a life where every day is a celebration of your backside success, where doors open simply because of the magnificence of your gluteal greatness. The path ahead is paved with opportunities that will make you the envy of all!",
+                "Expect a major lift—both in life and in your seat! This isn’t just a minor boost; it’s a cosmic elevation that will take you to the stratosphere of success. Your posterior will become a symbol of power and prestige, lifting you to places you've only imagined in your most extravagant daydreams. The sky isn’t the limit—your seat is!"
+            ];
+
+        document.getElementById('spinButton').addEventListener('click', function() {
+            const degrees = Math.floor(Math.random() * 360) + 1;
+            const wheel = document.getElementById('wheel');
+            wheel.style.transition = 'transform 3s ease-out';
+            wheel.style.transform = `rotate(${degrees}deg)`;
+
+            setTimeout(() => {
+                const selectedDestiny = destinies[Math.floor(Math.random() * destinies.length)];
+                document.getElementById('result').textContent = selectedDestiny;
+            }, 3000);
+        });
     </script>
 
 </body>
