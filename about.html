@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DerBi Corp inc ltd MLM | About Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="header"></div> <!-- Placeholder for header content -->
+
+    <div class="content">
+        <section>
+            <h2>About Us</h2>
+            <p>At DerBi Corp inc ltd MLM, we pride ourselves on being leaders in the global marketplace of dreams. Our philosophy centers on empowering individuals with the tools and resources they need to unlock their fullest potential. We are driven by innovation, integrity, and the unwavering belief that every person has the power to achieve greatness—no ifs, ands, or buts.</p>
+            <img src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" alt="About Us">
+        </section>
+
+        <section>
+            <h2>Our Approach</h2>
+            <p>We combine cutting-edge strategies with a deep commitment to personal and professional growth. By fostering an environment of collaboration and support, we ensure that every member of our community has the opportunity to thrive—no matter what your definition of success may be.</p>
+            <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" alt="Our Approach">
+        </section>
+    </div>
+
+    <div id="footer"></div> <!-- Placeholder for footer content -->
+
+    <script>
+        // Load external HTML files
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+</body>
+
+</html>

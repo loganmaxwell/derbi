@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DerBi Corp inc ltd MLM | Founders</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .founder img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .founder {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .founders h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header"></div> <!-- Placeholder for header content -->
+
+    <div class="content">
+        <section class="founders">
+            <h2>Meet Our Visionary Founders: Der & Bi</h2>
+
+            <div class="founder">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Der, Co-Founder">
+                <h3>Der - The Oracle of Opportunity</h3>
+                <p>Der, known as "The Oracle of Opportunity," has a unique approach to business that has inspired millions. With an advanced degree in Business Mysticism, Der combines practical knowledge with unconventional wisdom, offering insights that are both profound and actionable—though often only by those who truly believe.</p>
+            </div>
+
+            <div class="founder">
+                <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006" alt="Bi, Co-Founder">
+                <h3>Bi - The Guru of Greatness</h3>
+                <p>Bi, often referred to as "The Guru of Greatness," brings an unparalleled level of insight and leadership. Having honed her skills in remote environments, Bi understands the value of working smart, not hard. Her methods have been described as unconventional yet effective, often involving techniques that are as surprising as they are successful.</p>
+            </div>
+
+            <div class="quote">
+                <p>“Together, Der and Bi have created a movement that transcends traditional business practices, blending innovative strategies with time-tested principles. Join us and discover the path to success—because with DerBi Corp inc ltd MLM, the sky isn’t even the limit.”</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="footer"></div> <!-- Placeholder for footer content -->
+
+    <script>
+        // Load external HTML files
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+</body>
+
+</html>

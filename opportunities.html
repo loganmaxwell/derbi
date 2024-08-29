@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DerBi Corp inc ltd MLM | Opportunities</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="header"></div> <!-- Placeholder for header content -->
+
+    <div class="content">
+        <section>
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Earn more, work less, and take control of your financial future.</li>
+                <li>Access exclusive products that support a lifestyle of success.</li>
+                <li>Join a global community of like-minded achievers who understand the value of opportunity.</li>
+                <li>Transform your life with strategies that have been proven by the best—just ask our top earners.</li>
+            </ul>
+            <img src="https://images.unsplash.com/photo-1518600506278-4e8ef466b810?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" alt="Opportunities">
+        </section>
+
+        <section class="income-calculator">
+            <h2>Income Calculator</h2>
+            <p>How many people will you recruit today?</p>
+            <input type="number" id="recruits" placeholder="Enter number of recruits">
+            <button class="button" onclick="calculateIncome()">Calculate Income</button>
+            <p id="income-result"></p>
+        </section>
+
+        <section>
+            <h2>What You Can Achieve</h2>
+            <p>By joining DerBi Corp inc ltd MLM, you open the door to limitless possibilities. Whether you're looking to build a robust income stream, develop new skills, or simply live the life of your dreams, our platform provides everything you need to succeed—without the usual hurdles.</p>
+            <img src="https://images.unsplash.com/photo-1522202223165-59b4cbe0a433?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" alt="Achievements">
+        </section>
+    </div>
+
+    <div id="footer"></div> <!-- Placeholder for footer content -->
+
+    <script>
+        // Load external HTML files
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+
+        // Income Calculator Script
+        function calculateIncome() {
+            const recruits = document.getElementById('recruits').value;
+            const income = recruits * 10000;
+            document.getElementById('income-result').innerHTML = `Congratulations! You could earn $${income.toLocaleString()}!`;
+        }
+    </script>
+
+</body>
+
+</html>
