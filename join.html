@@ -18,7 +18,7 @@
             <p>By becoming a member of DerBi Corp inc ltd MLM, you gain access to world-class resources, a supportive community, and an opportunity to change your life—starting right where you are. Whether you're on your couch, at your dining table, or even out in the backyard, we’re here to help you get your butt in gear and start achieving big things.</p>
             <p>So, what are you waiting for? Get your butt involved and join us today!</p>
 
-            <form action="thankyou.html" method="post">
+            <form id="joinForm" onsubmit="handleSubmit(event)">
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" required><br>
             
@@ -55,6 +55,14 @@
         fetch('footer.html')
             .then(response => response.text())
             .then(data => document.getElementById('footer').innerHTML = data);
+            function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            // Optionally, you could collect and process the form data here using FormData or similar
+    
+            // Redirect to the thank you page
+            window.location.href = 'thankyou.html';
+        }
     </script>
 
 </body>
