@@ -4,8 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DerBi Corp inc ltd MLM | Opportunities</title>
+    <title>DerBi Corp Inc Ltd MLM | Opportunities</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles for the income visualization */
+        .income-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .level {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .recruit {
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s ease;
+            margin: 0 5px;
+            font-weight: bold;
+        }
+
+        .level-1 .recruit {
+            width: 60px;
+            height: 60px;
+            font-size: 12px;
+        }
+
+        .level-2 .recruit {
+            width: 50px;
+            height: 50px;
+            font-size: 10px;
+        }
+
+        .level-3 .recruit {
+            width: 40px;
+            height: 40px;
+            font-size: 8px;
+        }
+
+        .recruit.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
 </head>
 
 <body>
@@ -31,15 +86,14 @@
             <input type="number" id="recruits" placeholder="Enter number of recruits">
             <button class="button" onclick="calculateIncome()">Calculate Income</button>
             <p id="income-result"></p>
+
+            <!-- Visualization of exponential income -->
+            <div id="income-visual" class="income-visual"></div>
         </section>
 
         <section>
             <h2>What You Can Achieve</h2>
-<<<<<<< Updated upstream
-            <p>By joining DerBi Corp inc ltd MLM, you open the door to limitless possibilities. Whether you’re looking to build a robust income stream, develop new skills, or simply enjoy a better lifestyle, our platform provides everything you need to succeed—all without leaving your butt too far behind. With our support, your home can become more than just a place to live; it can become a powerful center of success.</p>
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" alt="Achievements">
-=======
-            <p>By joining DerBi Corp inc ltd MLM, you open the door to limitless possibilities. Whether you're looking to build a robust income stream, develop new skills, or simply live the life of your dreams, our platform provides everything you need to succeed—without the usual hurdles.</p>
+            <p>By joining DerBi Corp Inc Ltd MLM, you open the door to limitless possibilities. Whether you're looking to build a robust income stream, develop new skills, or simply live the life of your dreams, our platform provides everything you need to succeed—without the usual hurdles.</p>
 
             <h2>Spin the Wheel of Destiny</h2>
             <div id="wheel">
@@ -55,7 +109,6 @@
             <div id="arrow"></div>
             <button id="spinButton">Spin Now!</button>
             <div id="result"></div>
->>>>>>> Stashed changes
         </section>
         
     </div>
@@ -69,10 +122,46 @@
         fetch('footer.html')
             .then(response => response.text())
             .then(data => document.getElementById('footer').innerHTML = data);
+
         function calculateIncome() {
-            const recruits = document.getElementById('recruits').value;
-            const income = recruits * 10000;
-            document.getElementById('income-result').innerHTML = `Congratulations! You could earn $${income.toLocaleString()}! Now get off your butt and start recruiting!`;
+            const recruits = parseInt(document.getElementById('recruits').value) || 0;
+            let totalIncome = 0;
+            let recruitLevel = 1;
+            let incomePerLevel = 10000;
+
+            let htmlContent = `<div class="level level-1"><div class="recruit">You</div></div>`;
+            let currentLevelRecruits = 1;
+
+            document.getElementById('income-visual').innerHTML = htmlContent;
+
+            setTimeout(() => {
+                const recruitElements = document.querySelectorAll('.recruit');
+                recruitElements[0].classList.add('visible');
+            }, 100);
+
+            for (let i = 0; i < 3; i++) {
+                setTimeout(() => {
+                    currentLevelRecruits *= recruits;
+                    totalIncome += currentLevelRecruits * incomePerLevel;
+                    htmlContent = `<div class="level level-${i + 2}">`;
+                    for (let j = 0; j < currentLevelRecruits; j++) {
+                        htmlContent += `<div class="recruit level-${i + 2}">$${incomePerLevel / 1000}K</div>`;
+                    }
+                    htmlContent += `</div>`;
+                    document.getElementById('income-visual').innerHTML += htmlContent;
+
+                    const recruitElements = document.querySelectorAll('.recruit');
+                    recruitElements.forEach((el, index) => {
+                        setTimeout(() => {
+                            el.classList.add('visible');
+                        }, index * 50);
+                    });
+                }, (i + 1) * 500);
+            }
+
+            setTimeout(() => {
+                document.getElementById('income-result').innerHTML = `Congratulations! You could earn up to $${totalIncome.toLocaleString()} from just 3 levels of recruits!`;
+            }, 2000);
         }
 
         const destinies = [
