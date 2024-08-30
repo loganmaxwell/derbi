@@ -328,3 +328,56 @@ img {
     display: block;
     margin: 20px auto;
 }
+
+.income-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    position: relative;
+}
+
+.level {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.recruit {
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.level-1 .recruit {
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+}
+
+.level-2 .recruit {
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+}
+
+.level-3 .recruit {
+    width: 40px;
+    height: 40px;
+    font-size: 8px;
+}
+
+.recruit.visible {
+    opacity: 1;
+    transform: scale(1);
+}
