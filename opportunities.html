@@ -1,133 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DerBi Corp Inc Ltd MLM | Opportunities</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div id="header"></div>
-
     <div class="content">
-        <section>
-            <h2>Why Choose Us?</h2>
-            <ul>
-                <li>Turn your butt’s favorite spot into a money-making hotspot.</li>
-                <li>Earn more, work less, and take control of your financial future, all from the comfort of your own home.</li>
-                <li>Access exclusive products that support a lifestyle of success without ever leaving your house.</li>
-                <li>Join a global community of like-minded achievers who understand that sometimes the biggest moves start with just shifting your butt.</li>
-                <li>Transform your life with strategies that have been proven by the best, from their living rooms, kitchens, and backyards.</li>
-            </ul>
-            <img src="https://images.unsplash.com/photo-1518600506278-4e8ef466b810?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080" alt="Opportunities">
-        </section>
+      <section>
+        <h2>Why Choose Us?</h2>
+        <ul>
+          <li>Turn your butt’s favorite spot into a money-making hotspot.</li>
+          <li>
+            Earn more, work less, and take control of your financial future, all
+            from the comfort of your own home.
+          </li>
+          <li>
+            Access exclusive products that support a lifestyle of success
+            without ever leaving your house.
+          </li>
+          <li>
+            Join a global community of like-minded achievers who understand that
+            sometimes the biggest moves start with just shifting your butt.
+          </li>
+          <li>
+            Transform your life with strategies that have been proven by the
+            best, from their living rooms, kitchens, and backyards.
+          </li>
+        </ul>
+        <img
+          src="https://images.unsplash.com/photo-1518600506278-4e8ef466b810?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080"
+          alt="Opportunities"
+        />
+      </section>
 
-        <section class="income-calculator">
-            <h2>Income Calculator</h2>
-            <p>How many people will you recruit today? It could be the difference between sitting on your butt or sitting on a goldmine. Calculate how much your comfy couch could be worth!</p>
-            <input type="number" id="recruits" placeholder="Enter number of recruits">
-            <button class="button" onclick="calculateIncome()">Calculate Income</button>
-            <p id="income-result"></p>
+      <section class="income-calculator">
+        <h2>Income Calculator</h2>
+        <p>
+          How many people will you recruit today? It could be the difference
+          between sitting on your butt or sitting on a goldmine. Calculate how
+          much your comfy couch could be worth!
+        </p>
+        <input
+          type="number"
+          id="recruits"
+          placeholder="Enter number of recruits"
+        />
+        <button class="button" onclick="calculateIncome()">
+          Calculate Income
+        </button>
+        <p id="income-result"></p>
 
-            <!-- Visualization of exponential income -->
-            <div id="income-visual" class="income-visual"></div>
-        </section>
+        <!-- Visualization of exponential income -->
+        <div id="income-visual" class="income-visual"></div>
+      </section>
 
-        <section>
-            <h2>What You Can Achieve</h2>
-            <p>By joining DerBi Corp Inc Ltd MLM, you open the door to limitless possibilities. Whether you're looking to build a robust income stream, develop new skills, or simply live the life of your dreams, our platform provides everything you need to succeed without the usual hurdles.</p>
+      <section>
+        <h2>What You Can Achieve</h2>
+        <p>
+          By joining DerBi Corp Inc Ltd MLM, you open the door to limitless
+          possibilities. Whether you're looking to build a robust income stream,
+          develop new skills, or simply live the life of your dreams, our
+          platform provides everything you need to succeed without the usual
+          hurdles.
+        </p>
 
-            <h2>Spin the Wheel of Destiny</h2>
-            <div id="wheel">
-                <div class="segment" style="background-color: #FF6384; transform: rotate(0deg);"></div>
-                <div class="segment" style="background-color: #36A2EB; transform: rotate(45deg);"></div>
-                <div class="segment" style="background-color: #FFCE56; transform: rotate(90deg);"></div>
-                <div class="segment" style="background-color: #4BC0C0; transform: rotate(135deg);"></div>
-                <div class="segment" style="background-color: #9966FF; transform: rotate(180deg);"></div>
-                <div class="segment" style="background-color: #FF9F40; transform: rotate(225deg);"></div>
-                <div class="segment" style="background-color: #FF6384; transform: rotate(270deg);"></div>
-                <div class="segment" style="background-color: #36A2EB; transform: rotate(315deg);"></div>
-            </div>
-            <div id="arrow"></div>
-            <button id="spinButton">Spin Now!</button>
-            <div id="result"></div>
-        </section>
-        
+        <h2>Spin the Wheel of Destiny</h2>
+        <div id="wheel">
+          <div
+            class="segment"
+            style="background-color: #ff6384; transform: rotate(0deg)"
+          ></div>
+          <div
+            class="segment"
+            style="background-color: #36a2eb; transform: rotate(45deg)"
+          ></div>
+          <div
+            class="segment"
+            style="background-color: #ffce56; transform: rotate(90deg)"
+          ></div>
+          <div
+            class="segment"
+            style="background-color: #4bc0c0; transform: rotate(135deg)"
+          ></div>
+          <div
+            class="segment"
+            style="background-color: #9966ff; transform: rotate(180deg)"
+          ></div>
+          <div
+            class="segment"
+            style="background-color: #ff9f40; transform: rotate(225deg)"
+          ></div>
+          <div
+            class="segment"
+            style="background-color: #ff6384; transform: rotate(270deg)"
+          ></div>
+          <div
+            class="segment"
+            style="background-color: #36a2eb; transform: rotate(315deg)"
+          ></div>
+        </div>
+        <div id="arrow"></div>
+        <button id="spinButton">Spin Now!</button>
+        <div id="result"></div>
+      </section>
     </div>
 
     <div id="footer"></div>
     <script src="loadHeaderFooter.js"></script>
 
     <script>
+      function calculateIncome() {
+        const recruits =
+          parseInt(document.getElementById("recruits").value) || 0;
+        let totalIncome = 0;
+        let recruitLevel = 1;
+        let incomePerLevel = 10000;
 
-        function calculateIncome() {
-            const recruits = parseInt(document.getElementById('recruits').value) || 0;
-            let totalIncome = 0;
-            let recruitLevel = 1;
-            let incomePerLevel = 10000;
+        let htmlContent = `<div class="level level-1"><div class="recruit">You</div></div>`;
+        let currentLevelRecruits = 1;
 
-            let htmlContent = `<div class="level level-1"><div class="recruit">You</div></div>`;
-            let currentLevelRecruits = 1;
+        document.getElementById("income-visual").innerHTML = htmlContent;
 
-            document.getElementById('income-visual').innerHTML = htmlContent;
+        setTimeout(() => {
+          const recruitElements = document.querySelectorAll(".recruit");
+          recruitElements[0].classList.add("visible");
+        }, 100);
 
-            setTimeout(() => {
-                const recruitElements = document.querySelectorAll('.recruit');
-                recruitElements[0].classList.add('visible');
-            }, 100);
+        for (let i = 0; i < 3; i++) {
+          setTimeout(
+            () => {
+              currentLevelRecruits *= recruits;
+              totalIncome += currentLevelRecruits * incomePerLevel;
+              htmlContent = `<div class="level level-${i + 2}">`;
+              for (let j = 0; j < currentLevelRecruits; j++) {
+                htmlContent += `<div class="recruit level-${i + 2}">$${incomePerLevel / 1000}K</div>`;
+              }
+              htmlContent += `</div>`;
+              document.getElementById("income-visual").innerHTML += htmlContent;
 
-            for (let i = 0; i < 3; i++) {
+              const recruitElements = document.querySelectorAll(".recruit");
+              recruitElements.forEach((el, index) => {
                 setTimeout(() => {
-                    currentLevelRecruits *= recruits;
-                    totalIncome += currentLevelRecruits * incomePerLevel;
-                    htmlContent = `<div class="level level-${i + 2}">`;
-                    for (let j = 0; j < currentLevelRecruits; j++) {
-                        htmlContent += `<div class="recruit level-${i + 2}">$${incomePerLevel / 1000}K</div>`;
-                    }
-                    htmlContent += `</div>`;
-                    document.getElementById('income-visual').innerHTML += htmlContent;
-
-                    const recruitElements = document.querySelectorAll('.recruit');
-                    recruitElements.forEach((el, index) => {
-                        setTimeout(() => {
-                            el.classList.add('visible');
-                        }, index * 50);
-                    });
-                }, (i + 1) * 500);
-            }
-
-            setTimeout(() => {
-                document.getElementById('income-result').innerHTML = `Congratulations! You could earn up to $${totalIncome.toLocaleString()} from just 3 levels of recruits!`;
-            }, 2000);
+                  el.classList.add("visible");
+                }, index * 50);
+              });
+            },
+            (i + 1) * 500,
+          );
         }
 
-        const destinies = [
-                "Brace yourself, for your booty bank account is about to explode with unimaginable wealth! The kind of wealth that will have you sitting pretty on a golden throne, your riches overflowing like a river of gluteal gold. Get ready to watch your assets grow in ways you've never dreamed possible!",
-                "Prepare for the ultimate rear-end revolution! Your life is about to be turned upside down in the best way possible. You'll experience a seismic shift in your fortunes as your derriere takes center stage, leading you to glory, fame, and a lifestyle of absolute luxury. This revolution will leave everyone in awe of your newfound power and poise!",
-                "Get ready to double down on your derriere destiny! The stars have aligned, and they’ve got your back, literally! Your future is filled with endless opportunities that will lift you to new heights, where your every step is cushioned by the plushness of prosperity. Expect double the rewards, double the success, and double the compliments on your posterior prowess!",
-                "You’ll be the talk of the town, the toast of every gathering, as your newfound gluteal gains catapult you into a league of your own! People will whisper in amazement as you pass by, marveling at how you've managed to elevate your life, and your bottom, to such legendary status. This is your moment to shine, from the bottom up!",
-                "Your buns of fortune are just around the corner, and they’re not just any buns. They’re the kind that could win awards, spark envy, and inspire entire generations! This is the beginning of a journey where every cheeky move you make leads to greater glory and success. Prepare to embrace a future where your buns are truly the talk of the universe!",
-                "A boost to your bottom line is on its way, and it’s going to be so big, so monumental, that it’ll make headlines! Your financials will inflate to astronomical proportions, supported by the incredible foundation of your ever-growing rear assets. Get ready for a ride where every dollar earned feels like a cushion under your throne of wealth!",
-                "Your rear future is looking bright, bountiful, and brimming with potential beyond your wildest dreams! Picture a life where every day is a celebration of your backside success, where doors open simply because of the magnificence of your gluteal greatness. The path ahead is paved with opportunities that will make you the envy of all!",
-                "Expect a major lift—both in life and in your seat! This isn’t just a minor boost; it’s a cosmic elevation that will take you to the stratosphere of success. Your posterior will become a symbol of power and prestige, lifting you to places you've only imagined in your most extravagant daydreams. The sky isn’t the limit—your seat is!"
-            ];
+        setTimeout(() => {
+          document.getElementById("income-result").innerHTML =
+            `Congratulations! You could earn up to $${totalIncome.toLocaleString()} from just 3 levels of recruits!`;
+        }, 2000);
+      }
 
-        document.getElementById('spinButton').addEventListener('click', function() {
-            const degrees = Math.floor(Math.random() * 360) + 1;
-            const wheel = document.getElementById('wheel');
-            wheel.style.transition = 'transform 3s ease-out';
-            wheel.style.transform = `rotate(${degrees}deg)`;
+      const destinies = [
+        "Brace yourself, for your booty bank account is about to explode with unimaginable wealth! The kind of wealth that will have you sitting pretty on a golden throne, your riches overflowing like a river of gluteal gold. Get ready to watch your assets grow in ways you've never dreamed possible!",
+        "Prepare for the ultimate rear-end revolution! Your life is about to be turned upside down in the best way possible. You'll experience a seismic shift in your fortunes as your derriere takes center stage, leading you to glory, fame, and a lifestyle of absolute luxury. This revolution will leave everyone in awe of your newfound power and poise!",
+        "Get ready to double down on your derriere destiny! The stars have aligned, and they’ve got your back, literally! Your future is filled with endless opportunities that will lift you to new heights, where your every step is cushioned by the plushness of prosperity. Expect double the rewards, double the success, and double the compliments on your posterior prowess!",
+        "You’ll be the talk of the town, the toast of every gathering, as your newfound gluteal gains catapult you into a league of your own! People will whisper in amazement as you pass by, marveling at how you've managed to elevate your life, and your bottom, to such legendary status. This is your moment to shine, from the bottom up!",
+        "Your buns of fortune are just around the corner, and they’re not just any buns. They’re the kind that could win awards, spark envy, and inspire entire generations! This is the beginning of a journey where every cheeky move you make leads to greater glory and success. Prepare to embrace a future where your buns are truly the talk of the universe!",
+        "A boost to your bottom line is on its way, and it’s going to be so big, so monumental, that it’ll make headlines! Your financials will inflate to astronomical proportions, supported by the incredible foundation of your ever-growing rear assets. Get ready for a ride where every dollar earned feels like a cushion under your throne of wealth!",
+        "Your rear future is looking bright, bountiful, and brimming with potential beyond your wildest dreams! Picture a life where every day is a celebration of your backside success, where doors open simply because of the magnificence of your gluteal greatness. The path ahead is paved with opportunities that will make you the envy of all!",
+        "Expect a major lift—both in life and in your seat! This isn’t just a minor boost; it’s a cosmic elevation that will take you to the stratosphere of success. Your posterior will become a symbol of power and prestige, lifting you to places you've only imagined in your most extravagant daydreams. The sky isn’t the limit—your seat is!",
+      ];
 
-            setTimeout(() => {
-                const selectedDestiny = destinies[Math.floor(Math.random() * destinies.length)];
-                document.getElementById('result').textContent = selectedDestiny;
-            }, 3000);
+      document
+        .getElementById("spinButton")
+        .addEventListener("click", function () {
+          const degrees = Math.floor(Math.random() * 360) + 1;
+          const wheel = document.getElementById("wheel");
+          wheel.style.transition = "transform 3s ease-out";
+          wheel.style.transform = `rotate(${degrees}deg)`;
+
+          setTimeout(() => {
+            const selectedDestiny =
+              destinies[Math.floor(Math.random() * destinies.length)];
+            document.getElementById("result").textContent = selectedDestiny;
+          }, 3000);
         });
     </script>
-
-</body>
-
+  </body>
 </html>
